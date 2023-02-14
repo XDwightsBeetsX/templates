@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+
+    background-color: green;
+}
+.navbar > .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+}
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.navbar-items > a {
+    padding: 10%;
+
+    color: white;
+}
+.navbar-items > a:hover {
+    background-color: darkgreen;
+    border-radius: 5px;
+}
+
+
+.hamburger {
+    display: none;
+    user-select: none;
+}
+.hamburger > input[type=checkbox] {
+    display: none;
+}
+.hamburger-icon {
+    color: white;
+    cursor: pointer;
+}
+
+/* DYNAMIC SIZING */
+@media (max-width: 768px) {
+    .navbar-items {
+        display: none;
+        position: absolute;
+        top: 10%;
+        flex-direction: column;
+        width: 100%;
+
+        background-color: rgb(2, 89, 2);
+    }
+    .hamburger {
+        display: flex;
+    }
+    input[type=checkbox]:checked .navbar-items {
+        display: flex;
+    }
+}
