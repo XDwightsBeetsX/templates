@@ -1,0 +1,125 @@
+/* ===================================================== */
+/* ================== PROGRESS BARS ==================== */
+/* ===================================================== */
+.bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+/* ROUNDED */
+.jg-rounded :first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 240px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: rgba(50, 50, 50, .8);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.jg-rounded :first-child :first-child {
+	position: relative;
+	height: 1.2em;
+	margin: 0 .5em 0 .5em;
+	width: 0;
+	border-radius: 15px;
+	box-shadow: none;
+	background-color: #EF476F;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  	
+	transition: 0.4s linear;
+  	transition-property: width, background-color;
+	animation: jg-rounded 4s ease-in-out infinite;
+}
+@keyframes jg-rounded {
+	0% {
+		width: .5em;
+	}
+	100% {
+		width: 14em;
+	}
+}
+
+/* GRADIENT */
+.jg-gradient :first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 240px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgba(50, 50, 50, .8);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.jg-gradient :first-child :first-child {
+	position: relative;
+	height: 1.2em;
+	margin: 0 .4em 0 .4em;
+	width: 14.2em;
+	border-radius: 5px;
+	box-shadow: none;
+	background: linear-gradient(to right, #e5405e, rgba(255, 200, 20, 0.9), rgba(120, 255, 100, 0.9));
+}
+.jg-gradient :first-child :nth-child(2) {
+	position: absolute;
+	height: 1.2em;
+	margin: 0 .4em 0 .4em;
+	width: 14.2em;
+	
+	border-radius: 0 5px 5px 0;
+	box-shadow: none;
+	background-color: rgba(50, 50, 50, .94);
+  	
+	animation: jg-gradient 5s infinite;
+}
+@keyframes jg-gradient {
+	0% {
+		width: 14.2em;
+	}
+	100% {
+		width: 0.1em;
+	}
+}
+
+/* STREAK */
+.jg-streak :first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 240px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgba(50, 50, 50, .8);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+.jg-streak :first-child :first-child {
+	position: relative;
+	height: 1.2em;
+	margin: 0 .4em 0 .4em;
+	width: 14.2em;
+	border-radius: 5px;
+	box-shadow: none;
+	background-image: linear-gradient(to right, #ffc9de, #fbfdaa, #c1f0b2, #b2edf0);
+  	
+	transition: 0.4s linear;
+  	transition-property: background-color;
+	animation: jg-streak 1s infinite;
+}
+@keyframes jg-streak {
+	0% {
+		background-image: linear-gradient(to right, #fb6f92, #ffc9de, #fbfdaa, #c1f0b2, #b2edf0);
+	}
+	25% {
+		background-image: linear-gradient(to right, #b2edf0, #fb6f92, #ffc9de, #fbfdaa, #c1f0b2);
+	}
+	50% {
+		background-image: linear-gradient(to right, #c1f0b2, #b2edf0, #fb6f92, #ffc9de, #fbfdaa);
+	}
+	75% {
+		background-image: linear-gradient(to right, #fbfdaa, #c1f0b2, #b2edf0, #fb6f92, #ffc9de);
+	}
+	100% {
+		background-image: linear-gradient(to right, #f8f8c7, #fbfdaa, #c1f0b2, #b2edf0, #fb6f92);
+	}
+}
